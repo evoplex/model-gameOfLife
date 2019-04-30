@@ -53,7 +53,6 @@ QStringList GameOfLife::parseCmd(const QString &cmd)
         return QStringList();
     }
     // check if the rulestring has unique integers
-    qWarning() << _cmd1.split("") << _cmd1 << QSet<QString>::fromList(_cmd2.split("")) << _cmd2;
     if (QSet<QString>::fromList(_cmd1.split("")).count() != _cmd1.size() + 1 || QSet<QString>::fromList(_cmd2.split("")).count() != _cmd2.size() + 1)
     {
         qWarning() << "Integers can't appear more than once on each rule.";
@@ -64,11 +63,10 @@ QStringList GameOfLife::parseCmd(const QString &cmd)
 
 bool GameOfLife::init()
 {
-    qWarning() <<"started";
     // gets the id of the `live` node's attribute, which is the same for all nodes
     m_liveAttrId = node(0).attrs().indexOf("live");
-    // parses the ruleset
-    
+   
+    // parses the ruleset    
     if (attrExists("rules")){
         m_ruleset = attr("rules").toQString();
     }
