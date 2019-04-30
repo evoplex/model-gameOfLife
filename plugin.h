@@ -17,9 +17,12 @@ class GameOfLife: public AbstractModel
 public:
     bool init() override;
     bool algorithmStep() override;
+    QStringList parseCmd(const QString &cmd);
 
 private:
     int m_liveAttrId;  // the id of the 'live' node's attribute
+    QString m_ruleset; // the model's ruleset (B/S format)
+    QStringList m_rulesetLst;
 };
 } // evoplex
 #endif // GAME_OF_LIFEL_H
