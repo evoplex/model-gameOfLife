@@ -3,9 +3,9 @@
   "uid": "gameOfLife",
   "title": "Conway's Game of Life",
   "version": 1,
-  "author": "Ethan Padden and Marcos Cardinot",
-  "description": "This implements Conway's Game Of Life cellular automaton.",
-
+  "author": "Ethan Padden, Marcos Cardinot and Eleftheria Chatziargyriou",
+  "description": "This implements life-like cellular automata.",
   "supportedGraphs": ["squareGrid"],
+  "pluginAttributesScope": [ {"rules": "string"} ],
   "nodeAttributesScope": [ {"live": "bool"} ]
 }
